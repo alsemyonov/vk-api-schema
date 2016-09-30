@@ -1779,7 +1779,11 @@
         {
           "name": "order",
           "description": "Sort order: ; 'name' — by name (enabled only if the 'fields' parameter is used); 'hints' — by rating, similar to how friends are sorted in My friends section; ; This parameter is available only for .",
-          "type": "string"
+          "type": "string",
+          "enum": [
+            "name",
+            "hints"
+          ]
         },
         {
           "name": "list_id",
@@ -5135,7 +5139,12 @@
           "name": "filter",
           "description": "Types of objects to return:; 'friends' — only friends; 'groups' — only communities; 'all' — both friends and communities (default)",
           "type": "string",
-          "default": 0
+          "default": 0,
+          "enum": [
+            "all",
+            "friends",
+            "groups"
+          ]
         },
         {
           "name": "active",
@@ -5917,7 +5926,13 @@
           "name": "sort",
           "description": "Sort order. Available values: 'id_asc', 'id_desc', 'time_asc', 'time_desc'.; 'time_asc' and 'time_desc' are availavle only if the method is called by the group's 'moderator'.",
           "type": "string",
-          "default": 0
+          "default": 0,
+          "enum": [
+            "id_asc",
+            "id_desc",
+            "time_asc",
+            "time_desc"
+          ]
         },
         {
           "name": "offset",
@@ -7238,7 +7253,13 @@
         {
           "name": "order",
           "description": "Sort order:; '1' — by date updated in reverse chronological order.; '2' — by date created in reverse chronological order.; '-1' — by date updated in chronological order.; '-2' — by date created in chronological order.; ; If no sort order is specified, topics are returned in the order specified by the group administrator. Pinned topics are returned first, regardless of the sorting.",
-          "type": "integer"
+          "type": "integer",
+          "enum": [
+            "1",
+            "2",
+            "-1",
+            "-2"
+          ]
         },
         {
           "name": "offset",
